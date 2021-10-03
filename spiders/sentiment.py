@@ -43,7 +43,7 @@ class SentimentAnalysis:
                         neg_c+=1
                 if leng == 0:
                     leng = 1
-                fin_comp = comp_sum/leng
+                fin_comp = (pos_c) / (pos_c + neg_c)
                 lis = [file.rstrip('.txt\n'),prod_link,leng,pos_c,neg_c,fin_comp]
     
                 with open(f'{self.topath}\\product_reviews.csv','a+') as wo:
